@@ -19,9 +19,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var facebookButton: UIButton!
     
     @IBOutlet weak var loginButton: UIButton!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.text = "fahd.larayedh@esprit.tn"
+        passwordTextField.text = "1234"
         // Do any additional setup after loading the view.
         initUI()
     }
@@ -39,17 +41,27 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginAction(_ sender: Any) {
-        print("login clicked")
-        login(email:emailTextField.text!,password:passwordTextField.text!)
+        //print("login clicked")
+        if (emailTextField.text! == "" || passwordTextField.text! == ""){
+            Alert.showIncompleteFormAlert(on: self)
+        }else{
+            login(email:emailTextField.text!,password:passwordTextField.text!)
+        }
+        //print("aaa  : ",Global.message)
+        //performSegue(withIdentifier: "loginSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "loginSegue"){
+        }
     }
     
     func login(email:String,password:String) {
-        //let url = URL(string: "https://set-out.herokuapp/login")!
-
-            let parameters: [String: String] = ["email": email, "password": password]
+        var json: String?
+        let parameters: [String: String] = ["email": email, "password": password]
             //create the url with URL
-            //let url = URL(string: "http://localhost:3000/login")!
-            let url = URL(string: "https://set-out.herokuapp.com/login")!
+            let url = URL(string: "http://localhost:3000/login")!
+            //let url = URL(string: "https://set-out.herokuapp.com/login")!
             //create the session object
             let session = URLSession.shared
             //now create the URLRequest object using the url object
@@ -68,9 +80,9 @@ class ViewController: UIViewController {
                 guard error == nil else {
                     return
                 }
-                guard let data = data else {
+                /*guard let data = data else {
                     return
-                }
+                }*/
                 do {
                     //create json object from data
                     /*if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
@@ -84,19 +96,30 @@ class ViewController: UIViewController {
                     /*let jsonResponse = try JSONSerialization.jsonObject(with:
                                                    data, options: [])
                             print(jsonResponse) //Response result*/
-                    let json = try String(data: data,encoding: .utf8)!
-                    print(json)
-                } catch let error {
+                        json = String(data: data!,encoding: .utf8)
+                    //print("json response := ",json!)
+                    
+                } /*catch let error {
                     print(error.localizedDescription)
+                }*/
+                DispatchQueue.main.async {
+                    if (json!.contains("Login success")){
+                        self.performSegue(withIdentifier: "loginSegue", sender: self)
+                    }else if (json!.contains("Wrong password")){
+                        Alert.showInvalidPasswordAlert(on: self.self)
+                    }
+                    else if (json!.contains("Email does not exist")){
+                        Alert.showInvalidEmailAlert(on: self.self)
+                    }
                 }
             })
             task.resume()
-        }
+    }
+    
+    
         
     func assignbackground(){
-
-        do {
-           let background = try UIImage(named: "login/LOGIN")
+           let background = UIImage(named: "login/LOGIN")
             
             var imageView : UIImageView!
             imageView = UIImageView(frame: view.bounds)
@@ -106,10 +129,6 @@ class ViewController: UIViewController {
             imageView.center = view.center
             view.addSubview(imageView)
             self.view.sendSubviewToBack(imageView)
-        } catch  {
-            print("eroor IOSASSETS/login/LOGIN")
-        }
-
        }
     
     
@@ -126,8 +145,17 @@ class ViewController: UIViewController {
     }
 }
 
-struct Root : Codable{
+/*struct Root : Codable{
     public var response : String!
 }
+*/
+/*
+struct Global {
+    static var message: String?
+
+    static func setMessage(message:String) {
+        Global.message = message
+    }
+}*/
 
 

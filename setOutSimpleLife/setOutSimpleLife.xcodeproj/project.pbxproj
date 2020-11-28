@@ -16,6 +16,14 @@
 		989A84472566B2DA00A0F277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989A84452566B2DA00A0F277 /* LaunchScreen.storyboard */; };
 		989A84542566B43500A0F277 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A84532566B43500A0F277 /* SignUpViewController.swift */; };
 		989A845A2567C8CB00A0F277 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A84592567C8CB00A0F277 /* Alert.swift */; };
+		989A845E256DADC600A0F277 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A845D256DADC600A0F277 /* ForgotPasswordViewController.swift */; };
+		989A8464256E7CD800A0F277 /* poppinsbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 989A8460256E7CD800A0F277 /* poppinsbold.otf */; };
+		989A8465256E7CD800A0F277 /* poppinsblack.otf in Resources */ = {isa = PBXBuildFile; fileRef = 989A8461256E7CD800A0F277 /* poppinsblack.otf */; };
+		989A8466256E7CD800A0F277 /* pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 989A8462256E7CD800A0F277 /* pacifico.ttf */; };
+		989A8467256E7CD800A0F277 /* poppinsregular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 989A8463256E7CD800A0F277 /* poppinsregular.otf */; };
+		989A846A256E986F00A0F277 /* ConfirmPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A8469256E986F00A0F277 /* ConfirmPasswordViewController.swift */; };
+		989A846D256E9EB200A0F277 /* ConfirmCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A846C256E9EB200A0F277 /* ConfirmCodeViewController.swift */; };
+		989A8470256EAE3200A0F277 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A846F256EAE3200A0F277 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,14 @@
 		989A84482566B2DA00A0F277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		989A84532566B43500A0F277 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		989A84592567C8CB00A0F277 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		989A845D256DADC600A0F277 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		989A8460256E7CD800A0F277 /* poppinsbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = poppinsbold.otf; sourceTree = "<group>"; };
+		989A8461256E7CD800A0F277 /* poppinsblack.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = poppinsblack.otf; sourceTree = "<group>"; };
+		989A8462256E7CD800A0F277 /* pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pacifico.ttf; sourceTree = "<group>"; };
+		989A8463256E7CD800A0F277 /* poppinsregular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = poppinsregular.otf; sourceTree = "<group>"; };
+		989A8469256E986F00A0F277 /* ConfirmPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordViewController.swift; sourceTree = "<group>"; };
+		989A846C256E9EB200A0F277 /* ConfirmCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeViewController.swift; sourceTree = "<group>"; };
+		989A846F256EAE3200A0F277 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +103,10 @@
 		989A84512566B3FF00A0F277 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				989A8462256E7CD800A0F277 /* pacifico.ttf */,
+				989A8461256E7CD800A0F277 /* poppinsblack.otf */,
+				989A8460256E7CD800A0F277 /* poppinsbold.otf */,
+				989A8463256E7CD800A0F277 /* poppinsregular.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -96,6 +116,10 @@
 			children = (
 				989A843B2566B2D700A0F277 /* ViewController.swift */,
 				989A84532566B43500A0F277 /* SignUpViewController.swift */,
+				989A845D256DADC600A0F277 /* ForgotPasswordViewController.swift */,
+				989A8469256E986F00A0F277 /* ConfirmPasswordViewController.swift */,
+				989A846C256E9EB200A0F277 /* ConfirmCodeViewController.swift */,
+				989A846F256EAE3200A0F277 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,9 +189,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				989A8466256E7CD800A0F277 /* pacifico.ttf in Resources */,
+				989A8467256E7CD800A0F277 /* poppinsregular.otf in Resources */,
+				989A8464256E7CD800A0F277 /* poppinsbold.otf in Resources */,
 				989A84472566B2DA00A0F277 /* LaunchScreen.storyboard in Resources */,
 				989A84442566B2DA00A0F277 /* Assets.xcassets in Resources */,
 				989A843F2566B2D700A0F277 /* Main.storyboard in Resources */,
+				989A8465256E7CD800A0F277 /* poppinsblack.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,10 +207,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				989A845A2567C8CB00A0F277 /* Alert.swift in Sources */,
+				989A845E256DADC600A0F277 /* ForgotPasswordViewController.swift in Sources */,
 				989A843C2566B2D700A0F277 /* ViewController.swift in Sources */,
 				989A84382566B2D700A0F277 /* AppDelegate.swift in Sources */,
 				989A843A2566B2D700A0F277 /* SceneDelegate.swift in Sources */,
+				989A8470256EAE3200A0F277 /* HomeViewController.swift in Sources */,
+				989A846D256E9EB200A0F277 /* ConfirmCodeViewController.swift in Sources */,
 				989A84422566B2D700A0F277 /* setOutSimpleLife.xcdatamodeld in Sources */,
+				989A846A256E986F00A0F277 /* ConfirmPasswordViewController.swift in Sources */,
 				989A84542566B43500A0F277 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
