@@ -11,6 +11,7 @@ import UIKit
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
