@@ -1,0 +1,32 @@
+PODS:
+  - CalendarKit (0.14.2)
+  - CULColorPicker (0.1.0)
+  - FSCalendar (2.8.2)
+  - HorizontalCalendar (0.0.1)
+  - SwiftChart (1.0.1)
+
+DEPENDENCIES:
+  - CalendarKit
+  - CULColorPicker
+  - FSCalendar
+  - HorizontalCalendar
+  - SwiftChart
+
+SPEC REPOS:
+  trunk:
+    - CalendarKit
+    - CULColorPicker
+    - FSCalendar
+    - HorizontalCalendar
+    - SwiftChart
+
+SPEC CHECKSUMS:
+  CalendarKit: 35dbb6e0809f7c282982a18e04fef71952d3cc55
+  CULColorPicker: 43417b036b75277029de0c489d94d6d3a7378ddc
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  HorizontalCalendar: 264ae0d6b162890d637db90db3a618fc14587a69
+  SwiftChart: ba767a678d568a5ee22d419e146a0582865e1aff
+
+PODFILE CHECKSUM: 568e5100f3116564732941a287907d6754174b4e
+
+COCOAPODS: 1.10.0

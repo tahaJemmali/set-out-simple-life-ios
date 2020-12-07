@@ -60,8 +60,9 @@ class ViewController: UIViewController {
         var json: String?
         let parameters: [String: String] = ["email": email, "password": password]
             //create the url with URL
-            let url = URL(string: "http://localhost:3000/login")!
-            //let url = URL(string: "https://set-out.herokuapp.com/login")!
+            //let url = URL(string: "http://localhost:3000/login")!
+        let url = URL(string: "https://set-out.herokuapp.com/login")!
+            
             //create the session object
             let session = URLSession.shared
             //now create the URLRequest object using the url object
@@ -69,6 +70,7 @@ class ViewController: UIViewController {
             request.httpMethod = "POST" //set http method as POST
             do {
                 request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) // pass dictionary to nsdata object and set it as request body
+              
 
             } catch let error {
                 print(error.localizedDescription)
@@ -104,6 +106,7 @@ class ViewController: UIViewController {
                 }*/
                 DispatchQueue.main.async {
                     if (json!.contains("Login success")){
+                         
                         self.performSegue(withIdentifier: "loginSegue", sender: self)
                     }else if (json!.contains("Wrong password")){
                         Alert.showInvalidPasswordAlert(on: self.self)

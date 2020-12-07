@@ -3,10 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F29688C257D88C9002EF1BF /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F29688B257D88C9002EF1BF /* ScheduleViewController.swift */; };
+		0F29688E257D9DF4002EF1BF /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F29688D257D9DF4002EF1BF /* DatePickerController.swift */; };
+		0F95F147257858EA00BD8B80 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F95F146257858EA00BD8B80 /* TaskViewController.swift */; };
+		0F963F6D257C58A9002DD836 /* date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F963F6C257C58A9002DD836 /* date.swift */; };
+		0FC75F52257C67DE001FE1E7 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC75F51257C67DE001FE1E7 /* json.swift */; };
+		0FC75F54257D3E41001FE1E7 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC75F53257D3E41001FE1E7 /* FinanceViewController.swift */; };
+		0FC9637825799A0D00E1784C /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9637725799A0D00E1784C /* ProjectModel.swift */; };
+		0FC9637A25799E3700E1784C /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9637925799E3700E1784C /* TaskModel.swift */; };
+		0FC9637D25799F2400E1784C /* TagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9637C25799F2400E1784C /* TagModel.swift */; };
+		0FC9637F2579C4AE00E1784C /* hexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9637E2579C4AE00E1784C /* hexColor.swift */; };
+		0FC96381257A734900E1784C /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC96380257A734900E1784C /* AddTaskViewController.swift */; };
+		0FC96383257ABE1200E1784C /* AddTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC96382257ABE1200E1784C /* AddTagViewController.swift */; };
+		0FC9638B257AD8B100E1784C /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9638A257AD8B100E1784C /* SwiftUIView.swift */; };
+		0FC9638D257AF6FB00E1784C /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9638C257AF6FB00E1784C /* Dictionary.swift */; };
+		0FC9638F257AFBC800E1784C /* toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9638E257AFBC800E1784C /* toast.swift */; };
+		0FC96391257BD7F400E1784C /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC96390257BD7F400E1784C /* AddProjectViewController.swift */; };
+		37C371A74B9EF231D0DE3C05 /* Pods_setOutSimpleLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B80E9CDD6B3492FE660DD97 /* Pods_setOutSimpleLife.framework */; };
 		989A84382566B2D700A0F277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A84372566B2D700A0F277 /* AppDelegate.swift */; };
 		989A843A2566B2D700A0F277 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A84392566B2D700A0F277 /* SceneDelegate.swift */; };
 		989A843C2566B2D700A0F277 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A843B2566B2D700A0F277 /* ViewController.swift */; };
@@ -27,6 +44,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F29688B257D88C9002EF1BF /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		0F29688D257D9DF4002EF1BF /* DatePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
+		0F95F146257858EA00BD8B80 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		0F963F6C257C58A9002DD836 /* date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = date.swift; sourceTree = "<group>"; };
+		0FC75F51257C67DE001FE1E7 /* json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		0FC75F53257D3E41001FE1E7 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
+		0FC9637725799A0D00E1784C /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		0FC9637925799E3700E1784C /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		0FC9637C25799F2400E1784C /* TagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModel.swift; sourceTree = "<group>"; };
+		0FC9637E2579C4AE00E1784C /* hexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hexColor.swift; sourceTree = "<group>"; };
+		0FC96380257A734900E1784C /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		0FC96382257ABE1200E1784C /* AddTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTagViewController.swift; sourceTree = "<group>"; };
+		0FC9638A257AD8B100E1784C /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		0FC9638C257AF6FB00E1784C /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		0FC9638E257AFBC800E1784C /* toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toast.swift; sourceTree = "<group>"; };
+		0FC96390257BD7F400E1784C /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		3B80E9CDD6B3492FE660DD97 /* Pods_setOutSimpleLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_setOutSimpleLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CEE21EEFDB3A4677EFE61F8 /* Pods-setOutSimpleLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-setOutSimpleLife.release.xcconfig"; path = "Target Support Files/Pods-setOutSimpleLife/Pods-setOutSimpleLife.release.xcconfig"; sourceTree = "<group>"; };
+		7A3DA5DBD7139203A07449F9 /* Pods-setOutSimpleLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-setOutSimpleLife.debug.xcconfig"; path = "Target Support Files/Pods-setOutSimpleLife/Pods-setOutSimpleLife.debug.xcconfig"; sourceTree = "<group>"; };
 		989A84342566B2D700A0F277 /* setOutSimpleLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = setOutSimpleLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989A84372566B2D700A0F277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		989A84392566B2D700A0F277 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,17 +89,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C371A74B9EF231D0DE3C05 /* Pods_setOutSimpleLife.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FC96364257993BD00E1784C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0FC9637725799A0D00E1784C /* ProjectModel.swift */,
+				0FC9637925799E3700E1784C /* TaskModel.swift */,
+				0FC9637C25799F2400E1784C /* TagModel.swift */,
+				0FC9637E2579C4AE00E1784C /* hexColor.swift */,
+				0FC9638C257AF6FB00E1784C /* Dictionary.swift */,
+				0FC9638E257AFBC800E1784C /* toast.swift */,
+				0F963F6C257C58A9002DD836 /* date.swift */,
+				0FC75F51257C67DE001FE1E7 /* json.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0FC96387257ACA7A00E1784C /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				0FC9638A257AD8B100E1784C /* SwiftUIView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		2B4252A56FBD548ACB708F82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A3DA5DBD7139203A07449F9 /* Pods-setOutSimpleLife.debug.xcconfig */,
+				3CEE21EEFDB3A4677EFE61F8 /* Pods-setOutSimpleLife.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		70F334E0656F82D79E16AB1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B80E9CDD6B3492FE660DD97 /* Pods_setOutSimpleLife.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		989A842B2566B2D700A0F277 = {
 			isa = PBXGroup;
 			children = (
 				989A84362566B2D700A0F277 /* setOutSimpleLife */,
 				989A84352566B2D700A0F277 /* Products */,
+				2B4252A56FBD548ACB708F82 /* Pods */,
+				70F334E0656F82D79E16AB1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,10 +157,11 @@
 		989A84362566B2D700A0F277 /* setOutSimpleLife */ = {
 			isa = PBXGroup;
 			children = (
+				0FC96387257ACA7A00E1784C /* SwiftUI */,
+				0FC96364257993BD00E1784C /* Models */,
 				989A84582567C8AA00A0F277 /* Alert */,
 				989A84522566B40600A0F277 /* Controllers */,
 				989A84512566B3FF00A0F277 /* Fonts */,
-				989A84502566B3F700A0F277 /* Models */,
 				989A84372566B2D700A0F277 /* AppDelegate.swift */,
 				989A84392566B2D700A0F277 /* SceneDelegate.swift */,
 				989A843D2566B2D700A0F277 /* Main.storyboard */,
@@ -91,13 +171,6 @@
 				989A84402566B2D700A0F277 /* setOutSimpleLife.xcdatamodeld */,
 			);
 			path = setOutSimpleLife;
-			sourceTree = "<group>";
-		};
-		989A84502566B3F700A0F277 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		989A84512566B3FF00A0F277 /* Fonts */ = {
@@ -120,6 +193,13 @@
 				989A8469256E986F00A0F277 /* ConfirmPasswordViewController.swift */,
 				989A846C256E9EB200A0F277 /* ConfirmCodeViewController.swift */,
 				989A846F256EAE3200A0F277 /* HomeViewController.swift */,
+				0F95F146257858EA00BD8B80 /* TaskViewController.swift */,
+				0FC96380257A734900E1784C /* AddTaskViewController.swift */,
+				0FC96382257ABE1200E1784C /* AddTagViewController.swift */,
+				0FC96390257BD7F400E1784C /* AddProjectViewController.swift */,
+				0FC75F53257D3E41001FE1E7 /* FinanceViewController.swift */,
+				0F29688B257D88C9002EF1BF /* ScheduleViewController.swift */,
+				0F29688D257D9DF4002EF1BF /* DatePickerController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 989A844B2566B2DA00A0F277 /* Build configuration list for PBXNativeTarget "setOutSimpleLife" */;
 			buildPhases = (
+				1270033875C085CB875C6F5C /* [CP] Check Pods Manifest.lock */,
 				989A84302566B2D700A0F277 /* Sources */,
 				989A84312566B2D700A0F277 /* Frameworks */,
 				989A84322566B2D700A0F277 /* Resources */,
+				B43B368DC3CB3C6ABABA9705 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +240,9 @@
 		989A842C2566B2D700A0F277 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+				);
 				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
@@ -201,20 +286,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1270033875C085CB875C6F5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-setOutSimpleLife-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B43B368DC3CB3C6ABABA9705 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-setOutSimpleLife/Pods-setOutSimpleLife-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-setOutSimpleLife/Pods-setOutSimpleLife-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-setOutSimpleLife/Pods-setOutSimpleLife-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		989A84302566B2D700A0F277 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC96391257BD7F400E1784C /* AddProjectViewController.swift in Sources */,
+				0FC75F54257D3E41001FE1E7 /* FinanceViewController.swift in Sources */,
 				989A845A2567C8CB00A0F277 /* Alert.swift in Sources */,
+				0FC9638F257AFBC800E1784C /* toast.swift in Sources */,
+				0FC96381257A734900E1784C /* AddTaskViewController.swift in Sources */,
+				0FC9638D257AF6FB00E1784C /* Dictionary.swift in Sources */,
+				0FC9638B257AD8B100E1784C /* SwiftUIView.swift in Sources */,
 				989A845E256DADC600A0F277 /* ForgotPasswordViewController.swift in Sources */,
+				0FC75F52257C67DE001FE1E7 /* json.swift in Sources */,
+				0F963F6D257C58A9002DD836 /* date.swift in Sources */,
 				989A843C2566B2D700A0F277 /* ViewController.swift in Sources */,
+				0F29688E257D9DF4002EF1BF /* DatePickerController.swift in Sources */,
 				989A84382566B2D700A0F277 /* AppDelegate.swift in Sources */,
+				0FC9637825799A0D00E1784C /* ProjectModel.swift in Sources */,
 				989A843A2566B2D700A0F277 /* SceneDelegate.swift in Sources */,
+				0FC9637A25799E3700E1784C /* TaskModel.swift in Sources */,
+				0F29688C257D88C9002EF1BF /* ScheduleViewController.swift in Sources */,
 				989A8470256EAE3200A0F277 /* HomeViewController.swift in Sources */,
+				0FC9637D25799F2400E1784C /* TagModel.swift in Sources */,
 				989A846D256E9EB200A0F277 /* ConfirmCodeViewController.swift in Sources */,
 				989A84422566B2D700A0F277 /* setOutSimpleLife.xcdatamodeld in Sources */,
+				0FC96383257ABE1200E1784C /* AddTagViewController.swift in Sources */,
 				989A846A256E986F00A0F277 /* ConfirmPasswordViewController.swift in Sources */,
+				0FC9637F2579C4AE00E1784C /* hexColor.swift in Sources */,
+				0F95F147257858EA00BD8B80 /* TaskViewController.swift in Sources */,
 				989A84542566B43500A0F277 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +504,7 @@
 		};
 		989A844C2566B2DA00A0F277 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A3DA5DBD7139203A07449F9 /* Pods-setOutSimpleLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -379,6 +523,7 @@
 		};
 		989A844D2566B2DA00A0F277 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CEE21EEFDB3A4677EFE61F8 /* Pods-setOutSimpleLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

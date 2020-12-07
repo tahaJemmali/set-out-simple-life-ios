@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-setOutSimpleLife/Pods-setOutSimpleLife-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CULColorPicker/CULColorPicker.framework
+${BUILT_PRODUCTS_DIR}/CalendarKit/CalendarKit.framework
+${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework
+${BUILT_PRODUCTS_DIR}/HorizontalCalendar/HorizontalCalendar.framework
+${BUILT_PRODUCTS_DIR}/SwiftChart/SwiftChart.framework
