@@ -20,7 +20,8 @@ class FinanceViewController: UIViewController, UITableViewDataSource,UITableView
     var days:[Date] = []
     var balances:[BalanceModel] = []
     let dateformatter = DateFormatter()
-    
+    var balanceId = ""
+    static var instance: FinanceViewController?
     //OUTLET
       @IBOutlet weak var tableBalances: UITableView!
        @IBOutlet var viewContainer: UIScrollView!
@@ -56,6 +57,11 @@ class FinanceViewController: UIViewController, UITableViewDataSource,UITableView
           let imageArrow=contentView?.viewWithTag(1) as! UIImageView
           let balance=contentView?.viewWithTag(2) as! UILabel
            let amount=contentView?.viewWithTag(3) as! UILabel
+            let remove=contentView?.viewWithTag(4) as! UIButton
+        
+        balanceId = balances[indexPath.row]._id!
+        remove.addTarget(self, action: #selector(deleteButton(_:)), for: .touchUpInside)
+        
             balance.text=balances[indexPath.row].balanceName
             if balances[indexPath.row].type != "EARNED"{
                  amount.text="-" +  String(format: "%.1f", balances[indexPath.row].balanceAmount)
@@ -64,14 +70,71 @@ class FinanceViewController: UIViewController, UITableViewDataSource,UITableView
             }else{
                 amount.text="+" +  String(format: "%.1f", balances[indexPath.row].balanceAmount)
             }
-           
           return cell!
-          
         }
+    
+    @objc func deleteButton(_ sender: UIButton){
+        let alert = UIAlertController(title: "Remove Balance", message: "Would like to remove this balance ?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.deleteButton(id:self.balanceId)
+        }))
+          alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 //IBACTION
 
     
     //functions
+    func deleteButton(id:String) {
+        guard let url = URL(string: "https://set-out.herokuapp.com/delete_balance/"+id) else {
+                print("Error: cannot create URL")
+                return
+            }
+            // Create the request
+            var request = URLRequest(url: url)
+            request.httpMethod = "DELETE"
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                guard error == nil else {
+                    print("Error: error calling DELETE")
+                    print(error!)
+                    return
+                }
+                guard let data = data else {
+                    print("Error: Did not receive data")
+                    return
+                }
+                guard let response = response as? HTTPURLResponse, (200 ..< 299) ~= response.statusCode else {
+                    print("Error: HTTP request failed")
+                    return
+                }
+                do {
+                    guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+                        print("Error: Cannot convert data to JSON")
+                        return
+                    }
+                    guard let prettyJsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else {
+                        print("Error: Cannot convert JSON object to Pretty JSON data")
+                        return
+                    }
+                    guard let prettyPrintedJson = String(data: prettyJsonData, encoding: .utf8) else {
+                        print("Error: Could print JSON in String")
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        self.getAllBalances() 
+                                                   let alert1 = UIAlertController(title: "Balance Deleted", message: "The balance is deleted successfully", preferredStyle: .alert)
+                                                            alert1.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                                                              self.present(alert1, animated: true, completion: nil)
+                        self.tableBalances.reloadData()
+                                            }
+           
+                } catch {
+                    print("Error: Trying to convert JSON data to string")
+                    return
+                }
+            }.resume()
+    }
+    
     func initStat()  {
             let size = 50
             viewContainer.showsHorizontalScrollIndicator = true
@@ -155,19 +218,7 @@ class FinanceViewController: UIViewController, UITableViewDataSource,UITableView
             data3.append(saving)
                     }
     }
-    func week()  {
-        
-    }
-    
-    
-  func month()  {
-       
-   }
-      
-    func total()  {
-         
-     }
-    
+
 
 }
 
