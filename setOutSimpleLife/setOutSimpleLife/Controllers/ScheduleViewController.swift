@@ -9,40 +9,37 @@ import UIKit
 import CalendarKit
 
 class ScheduleViewController: DayViewController {
-   var data = [["Breakfast at Tiffany's",
-                  "New York, 5th avenue"],
-                 
-                 ["Workout",
-                  "Tufteparken"],
-                 
-                 ["Meeting with Alex",
-                  "Home",
-                  "Oslo, Tjuvholmen"],
-                 
-                 ["Beach Volleyball",
-                  "Ipanema Beach",
-                  "Rio De Janeiro"],
-                 
-                 ["WWDC",
-                  "Moscone West Convention Center",
-                  "747 Howard St"],
-                 
-                 ["Google I/O",
-                  "Shoreline Amphitheatre",
-                  "One Amphitheatre Parkway"],
-                 
-                 ["✈️️ to Svalbard ❄️️❄️️❄️️❤️️",
-                  "Oslo Gardermoen"],
-                 
-                 ["💻📲 Developing CalendarKit",
-                  "🌍 Worldwide"],
-                 
-                 ["Software Development Lecture",
-                  "Mikpoli MB310",
-                  "Craig Federighi"],
-                 
-     ]
+    var data:[[String]] = [[]]
      
+    var schedules:[ScheduleModel] = []
+    
+    func getAllSchedule()  {
+        let url = "https://set-out.herokuapp.com/all_schedules"
+        let urlRequest=URL(string:url)!
+          URLSession.shared.dataTask(with:urlRequest){
+              (data,response,error) in
+                  guard let data=data,error==nil else{
+                      print("Something went wrong")
+                      return
+                  }
+                  //have data
+                  do{
+                     let result = try JSONDecoder().decode(AllSchedules.self, from: data)
+                      let array = result.tasks as [ScheduleModel]?
+                    DispatchQueue.main.async {
+                        self.schedules = array!
+                        for row in self.schedules{
+                            self.data.append([row.taskName,row.note])
+                            self.reloadData()
+                        }
+                        print(self.data)
+                                        }
+                  }catch{
+                      print("failed to convert \(error.localizedDescription) ")
+                  }
+          }.resume()
+    }
+    
      var generatedEvents = [EventDescriptor]()
      var alreadyGeneratedSet = Set<Date>()
      
@@ -60,13 +57,14 @@ class ScheduleViewController: DayViewController {
      }()
 
      override func loadView() {
+        getAllSchedule()
        calendar.timeZone = TimeZone(identifier: "Europe/Paris")!
-
        dayView = DayView(calendar: calendar)
        view = dayView
      }
      
      override func viewDidLoad() {
+        
        super.viewDidLoad()
        navigationController?.navigationBar.isTranslucent = false
        dayView.autoScrollToFirstEvent = true
@@ -74,7 +72,7 @@ class ScheduleViewController: DayViewController {
      }
      
      // MARK: EventDataSource
-     
+ 
      override func eventsForDate(_ date: Date) -> [EventDescriptor] {
        if !alreadyGeneratedSet.contains(date) {
          alreadyGeneratedSet.insert(date)
@@ -97,7 +95,7 @@ class ScheduleViewController: DayViewController {
          var info = data[Int(arc4random_uniform(UInt32(data.count)))]
          
          let timezone = dayView.calendar.timeZone
-         print(timezone)
+        // print(timezone)
 
          info.append(rangeFormatter.string(from: event.startDate, to: event.endDate))
          event.text = info.reduce("", {$0 + $1 + "\n"})
@@ -120,7 +118,7 @@ class ScheduleViewController: DayViewController {
          event.userInfo = String(i)
        }
 
-       print("Events for \(date)")
+      // print("Events for \(date)")
        return events
      }
      
@@ -138,7 +136,7 @@ class ScheduleViewController: DayViewController {
        guard let descriptor = eventView.descriptor as? Event else {
          return
        }
-       print("Event has been selected: \(descriptor) \(String(describing: descriptor.userInfo))")
+    //   print("Event has been selected: \(descriptor) \(String(describing: descriptor.userInfo))")
      }
      
      override func dayViewDidLongPressEventView(_ eventView: EventView) {
@@ -146,35 +144,35 @@ class ScheduleViewController: DayViewController {
          return
        }
        endEventEditing()
-       print("Event has been longPressed: \(descriptor) \(String(describing: descriptor.userInfo))")
+     // print("Event has been longPressed: \(descriptor) \(String(describing: descriptor.userInfo))")
        beginEditing(event: descriptor, animated: true)
        print(Date())
      }
      
      override func dayView(dayView: DayView, didTapTimelineAt date: Date) {
        endEventEditing()
-       print("Did Tap at date: \(date)")
+     //  print("Did Tap at date: \(date)")
      }
      
      override func dayViewDidBeginDragging(dayView: DayView) {
        endEventEditing()
-       print("DayView did begin dragging")
+     //  print("DayView did begin dragging")
      }
      
      override func dayView(dayView: DayView, willMoveTo date: Date) {
-       print("DayView = \(dayView) will move to: \(date)")
+    //   print("DayView = \(dayView) will move to: \(date)")
      }
      
      override func dayView(dayView: DayView, didMoveTo date: Date) {
-       print("DayView = \(dayView) did move to: \(date)")
+      // print("DayView = \(dayView) did move to: \(date)")
      }
      
      override func dayView(dayView: DayView, didLongPressTimelineAt date: Date) {
-       print("Did long press timeline at date \(date)")
+    //   print("Did long press timeline at date \(date)")
        // Cancel editing current event and start creating a new one
        endEventEditing()
        let event = generateEventNearDate(date)
-       print("Creating a new event")
+     //  print("Creating a new event")
        create(event: event, animated: true)
        createdEvent = event
      }
@@ -206,8 +204,8 @@ class ScheduleViewController: DayViewController {
      }
      
      override func dayView(dayView: DayView, didUpdate event: EventDescriptor) {
-       print("did finish editing \(event)")
-       print("new startDate: \(event.startDate) new endDate: \(event.endDate)")
+   //    print("did finish editing \(event)")
+    //   print("new startDate: \(event.startDate) new endDate: \(event.endDate)")
        
        if let _ = event.editedEvent {
          event.commitEditing()
