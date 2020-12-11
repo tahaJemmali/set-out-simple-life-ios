@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		0F29688C257D88C9002EF1BF /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F29688B257D88C9002EF1BF /* ScheduleViewController.swift */; };
 		0F29688E257D9DF4002EF1BF /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F29688D257D9DF4002EF1BF /* DatePickerController.swift */; };
+		0F871A312583A54A00400D49 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F871A302583A54A00400D49 /* BalanceModel.swift */; };
 		0F95F147257858EA00BD8B80 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F95F146257858EA00BD8B80 /* TaskViewController.swift */; };
 		0F963F6D257C58A9002DD836 /* date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F963F6C257C58A9002DD836 /* date.swift */; };
+		0F96769F2583C2F200A1B197 /* AddBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96769E2583C2F200A1B197 /* AddBalanceViewController.swift */; };
 		0FC75F52257C67DE001FE1E7 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC75F51257C67DE001FE1E7 /* json.swift */; };
 		0FC75F54257D3E41001FE1E7 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC75F53257D3E41001FE1E7 /* FinanceViewController.swift */; };
 		0FC9637825799A0D00E1784C /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9637725799A0D00E1784C /* ProjectModel.swift */; };
@@ -46,8 +48,10 @@
 /* Begin PBXFileReference section */
 		0F29688B257D88C9002EF1BF /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		0F29688D257D9DF4002EF1BF /* DatePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
+		0F871A302583A54A00400D49 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 		0F95F146257858EA00BD8B80 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		0F963F6C257C58A9002DD836 /* date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = date.swift; sourceTree = "<group>"; };
+		0F96769E2583C2F200A1B197 /* AddBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBalanceViewController.swift; sourceTree = "<group>"; };
 		0FC75F51257C67DE001FE1E7 /* json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		0FC75F53257D3E41001FE1E7 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
 		0FC9637725799A0D00E1784C /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				0FC9638E257AFBC800E1784C /* toast.swift */,
 				0F963F6C257C58A9002DD836 /* date.swift */,
 				0FC75F51257C67DE001FE1E7 /* json.swift */,
+				0F871A302583A54A00400D49 /* BalanceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				0FC75F53257D3E41001FE1E7 /* FinanceViewController.swift */,
 				0F29688B257D88C9002EF1BF /* ScheduleViewController.swift */,
 				0F29688D257D9DF4002EF1BF /* DatePickerController.swift */,
+				0F96769E2583C2F200A1B197 /* AddBalanceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 				0FC75F54257D3E41001FE1E7 /* FinanceViewController.swift in Sources */,
 				989A845A2567C8CB00A0F277 /* Alert.swift in Sources */,
 				0FC9638F257AFBC800E1784C /* toast.swift in Sources */,
+				0F871A312583A54A00400D49 /* BalanceModel.swift in Sources */,
 				0FC96381257A734900E1784C /* AddTaskViewController.swift in Sources */,
 				0FC9638D257AF6FB00E1784C /* Dictionary.swift in Sources */,
 				0FC9638B257AD8B100E1784C /* SwiftUIView.swift in Sources */,
@@ -347,6 +354,7 @@
 				0F29688E257D9DF4002EF1BF /* DatePickerController.swift in Sources */,
 				989A84382566B2D700A0F277 /* AppDelegate.swift in Sources */,
 				0FC9637825799A0D00E1784C /* ProjectModel.swift in Sources */,
+				0F96769F2583C2F200A1B197 /* AddBalanceViewController.swift in Sources */,
 				989A843A2566B2D700A0F277 /* SceneDelegate.swift in Sources */,
 				0FC9637A25799E3700E1784C /* TaskModel.swift in Sources */,
 				0F29688C257D88C9002EF1BF /* ScheduleViewController.swift in Sources */,

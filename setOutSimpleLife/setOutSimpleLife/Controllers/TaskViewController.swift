@@ -69,7 +69,6 @@ class TaskViewController: UIViewController,UITableViewDataSource,UITableViewDele
             tagShape.image=colorless
             tagShape.tintColor = UIColor(hexString: projects[indexPath.row].tag.color)
         }
-        print(projects[indexPath.row].projectName)
         taskLabel.text=projects[indexPath.row].projectName
          desriptionLabel.text=projects[indexPath.row].description
         return cell!
