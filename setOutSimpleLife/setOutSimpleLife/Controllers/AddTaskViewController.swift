@@ -79,8 +79,7 @@ class AddTaskViewController: UIViewController    {
                    "dateCreation":Date(),
                    "deadline":deadline,
                    "reminder":reminder,
-                   "endTime":Date() + 60*60,
-                   "schedule":true
+                   "schedule":false
                ]
         
                request.httpBody = parameters.percentEncoded()

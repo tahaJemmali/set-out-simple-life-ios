@@ -51,7 +51,7 @@ class AddProjectViewController: UIViewController,UITableViewDataSource,UITableVi
         
   
        func getAllTasks()  {
-            let url = "https://set-out.herokuapp.com/all_schedules"
+            let url = "https://set-out.herokuapp.com/all_tasks"
                  let urlRequest=URL(string:url)!
                  URLSession.shared.dataTask(with:urlRequest){
                      (data,response,error) in
@@ -111,14 +111,14 @@ class AddProjectViewController: UIViewController,UITableViewDataSource,UITableVi
                let swit = row.contentView.viewWithTag(1) as! UISwitch
                if swit.isOn{
                   let t:[String:Any] =
-                   ["_id": tasks![i]._id!,
-                   "taskName": tasks![i].taskName!,
-                   "importance": tasks![i].importance!,
-                   "enjoyment": tasks![i].enjoyment!,
-                   "note": tasks![i].note!,
-                   "dateCreation": tasks![i].dateCreation!,
-                   "deadline": tasks![i].deadline!,
-                   "reminder": tasks![i].reminder!,
+                   ["_id": tasks![i]._id,
+                   "taskName": tasks![i].taskName,
+                   "importance": tasks![i].importance,
+                   "enjoyment": tasks![i].enjoyment,
+                   "note": tasks![i].note,
+                   "dateCreation": tasks![i].dateCreation,
+                   "deadline": tasks![i].deadline,
+                   "reminder": tasks![i].reminder,
                    "schedule": false
                    ]
                    
