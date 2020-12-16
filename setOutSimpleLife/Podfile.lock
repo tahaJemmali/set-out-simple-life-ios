@@ -1,15 +1,20 @@
 PODS:
   - FaveButton (3.2.1)
   - InputBarAccessoryView (4.3.3):
-    - InputBarAccessoryView/Core (= 4.3.3)
+  - InputBarAccessoryView/Core (= 4.3.3)
   - InputBarAccessoryView/Core (4.3.3)
   - KKPinCodeTextField (1.0.0)
   - MessageKit (3.1.0):
-    - InputBarAccessoryView (~> 4.3.0)
+  - InputBarAccessoryView (~> 4.3.0)
   - SVProgressHUD (2.2.5)
   - SwiftWebSocket (2.7.0)
   - TwitterProfile (1.0.0)
   - XLPagerTabStrip (8.1.0)
+  - CalendarKit (0.14.2)
+  - CULColorPicker (0.1.0)
+  - FSCalendar (2.8.2)
+  - HorizontalCalendar (0.0.1)
+  - SwiftChart (1.0.1)
 
 DEPENDENCIES:
   - FaveButton
@@ -19,6 +24,11 @@ DEPENDENCIES:
   - SwiftWebSocket (~> 2.7.0)
   - TwitterProfile
   - XLPagerTabStrip
+  - CalendarKit
+  - CULColorPicker
+  - FSCalendar
+  - HorizontalCalendar
+  - SwiftChart
 
 SPEC REPOS:
   trunk:
@@ -30,6 +40,11 @@ SPEC REPOS:
     - SwiftWebSocket
     - TwitterProfile
     - XLPagerTabStrip
+    - CalendarKit
+    - CULColorPicker
+    - FSCalendar
+    - HorizontalCalendar
+    - SwiftChart
 
 SPEC CHECKSUMS:
   FaveButton: 93cfebf6030336fa7653fad2068c3152ed668b39
@@ -40,7 +55,12 @@ SPEC CHECKSUMS:
   SwiftWebSocket: 612c9729fd503cb6b0b8b45390c788686dac306f
   TwitterProfile: bbbf6e1ed97e57e8da673e13f8e155b56e922b5e
   XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
+  CalendarKit: 35dbb6e0809f7c282982a18e04fef71952d3cc55
+  CULColorPicker: 43417b036b75277029de0c489d94d6d3a7378ddc
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  HorizontalCalendar: 264ae0d6b162890d637db90db3a618fc14587a69
+  SwiftChart: ba767a678d568a5ee22d419e146a0582865e1aff
 
-PODFILE CHECKSUM: 5b3a609067e18d201ae923553710e07df7ff168c
+PODFILE CHECKSUM: 568e5100f3116564732941a287907d6754174b4e
 
 COCOAPODS: 1.10.0

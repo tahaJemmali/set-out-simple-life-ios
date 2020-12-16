@@ -1,14 +1,15 @@
 //
 //  AppDelegate.swift
-//  setOutSimpleLife
+//  recapApp
 //
-//  Created by Fahd on 11/19/20.
+//  Created by taha on 28/10/2020.
+//  Copyright © 2020 taha. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
@@ -43,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "setOutSimpleLife")
+        let container = NSPersistentContainer(name: "recapApp")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
