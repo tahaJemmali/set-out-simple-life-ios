@@ -1,9 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-setOutSimpleLife/Pods-setOutSimpleLife-frameworks.sh
-${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework
-${BUILT_PRODUCTS_DIR}/InputBarAccessoryView/InputBarAccessoryView.framework
-${BUILT_PRODUCTS_DIR}/KKPinCodeTextField/KKPinCodeTextField.framework
-${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework
-${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
-${BUILT_PRODUCTS_DIR}/SwiftWebSocket/SwiftWebSocket.framework
-${BUILT_PRODUCTS_DIR}/TwitterProfile/TwitterProfile.framework
-${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework
