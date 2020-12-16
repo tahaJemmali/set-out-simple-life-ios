@@ -9,8 +9,8 @@ import UIKit
 import CalendarKit
 
 class ScheduleViewController: DayViewController {
-    var data:[[String]] = [[]]
-     
+    var data:[[String]] = []
+    var date:Date = Date()
     var schedules:[ScheduleModel] = []
     
     func getAllSchedule()  {
@@ -27,13 +27,16 @@ class ScheduleViewController: DayViewController {
                      let result = try JSONDecoder().decode(AllSchedules.self, from: data)
                       let array = result.tasks as [ScheduleModel]?
                     DispatchQueue.main.async {
-                        self.schedules = array!
-                        for row in self.schedules{
+                        for row in array!{
                             self.data.append([row.taskName,row.note])
-                            self.reloadData()
+                         
                         }
-                        print(self.data)
-                                        }
+                        self.schedules = array!
+                        self.alreadyGeneratedSet.insert(self.date)
+                        self.generatedEvents.removeAll()
+                        self.generatedEvents.append(contentsOf: self.generateEventsForDate(self.date))
+                        self.reloadData()
+                    }
                   }catch{
                       print("failed to convert \(error.localizedDescription) ")
                   }
@@ -56,15 +59,14 @@ class ScheduleViewController: DayViewController {
        return fmt
      }()
 
-     override func loadView() {
-        getAllSchedule()
-       calendar.timeZone = TimeZone(identifier: "Europe/Paris")!
+    override func loadView() {
+       calendar.timeZone = TimeZone(abbreviation: "GMT")!
        dayView = DayView(calendar: calendar)
        view = dayView
      }
      
      override func viewDidLoad() {
-        
+           getAllSchedule()
        super.viewDidLoad()
        navigationController?.navigationBar.isTranslucent = false
        dayView.autoScrollToFirstEvent = true
@@ -74,51 +76,38 @@ class ScheduleViewController: DayViewController {
      // MARK: EventDataSource
  
      override func eventsForDate(_ date: Date) -> [EventDescriptor] {
+        
        if !alreadyGeneratedSet.contains(date) {
          alreadyGeneratedSet.insert(date)
+        generatedEvents.removeAll()
          generatedEvents.append(contentsOf: generateEventsForDate(date))
+        reloadData()
        }
        return generatedEvents
      }
      
      private func generateEventsForDate(_ date: Date) -> [EventDescriptor] {
-       var workingDate = Calendar.current.date(byAdding: .hour, value: Int.random(in: 1...15), to: date)!
-       var events = [Event]()
-       
-       for i in 0...4 {
+         let dateformatter = DateFormatter()
+            dateformatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        var events = [Event]()
+        var i = 0
+        for row in data {
          let event = Event()
-
-         let duration = Int.random(in: 60 ... 160)
-         event.startDate = workingDate
-         event.endDate = Calendar.current.date(byAdding: .minute, value: duration, to: workingDate)!
-
-         var info = data[Int(arc4random_uniform(UInt32(data.count)))]
-         
-         let timezone = dayView.calendar.timeZone
-        // print(timezone)
-
-         info.append(rangeFormatter.string(from: event.startDate, to: event.endDate))
-         event.text = info.reduce("", {$0 + $1 + "\n"})
+            event.startDate = dateformatter.date(from: schedules[i].dateCreation)!
+            event.endDate = dateformatter.date(from: schedules[i].endTime)!
+         event.text = row.reduce("", {$0 + $1 + "\n"})
+            print(event.text)
          event.color = colors[Int(arc4random_uniform(UInt32(colors.count)))]
-         event.isAllDay = Int(arc4random_uniform(2)) % 2 == 0
-         
-         // Event styles are updated independently from CalendarStyle
-         // hence the need to specify exact colors in case of Dark style
          if #available(iOS 12.0, *) {
            if traitCollection.userInterfaceStyle == .dark {
              event.textColor = textColorForEventInDarkTheme(baseColor: event.color)
              event.backgroundColor = event.color.withAlphaComponent(0.6)
            }
          }
-         
          events.append(event)
-         
-         let nextOffset = Int.random(in: 40 ... 250)
-         workingDate = Calendar.current.date(byAdding: .minute, value: nextOffset, to: workingDate)!
-         event.userInfo = String(i)
+            i += 1
        }
 
-      // print("Events for \(date)")
        return events
      }
      
@@ -146,7 +135,7 @@ class ScheduleViewController: DayViewController {
        endEventEditing()
      // print("Event has been longPressed: \(descriptor) \(String(describing: descriptor.userInfo))")
        beginEditing(event: descriptor, animated: true)
-       print(Date())
+       //print(Date())
      }
      
      override func dayView(dayView: DayView, didTapTimelineAt date: Date) {
@@ -178,10 +167,10 @@ class ScheduleViewController: DayViewController {
      }
      
      private func generateEventNearDate(_ date: Date) -> EventDescriptor {
+        //print("here")
        let duration = Int(arc4random_uniform(160) + 60)
        let startDate = Calendar.current.date(byAdding: .minute, value: -Int(CGFloat(duration) / 2), to: date)!
        let event = Event()
-
        event.startDate = startDate
        event.endDate = Calendar.current.date(byAdding: .minute, value: duration, to: startDate)!
        
@@ -204,7 +193,7 @@ class ScheduleViewController: DayViewController {
      }
      
      override func dayView(dayView: DayView, didUpdate event: EventDescriptor) {
-   //    print("did finish editing \(event)")
+       
     //   print("new startDate: \(event.startDate) new endDate: \(event.endDate)")
        
        if let _ = event.editedEvent {
@@ -217,7 +206,7 @@ class ScheduleViewController: DayViewController {
          self.createdEvent = nil
          endEventEditing()
        }
-       
+        
        reloadData()
      }
    }

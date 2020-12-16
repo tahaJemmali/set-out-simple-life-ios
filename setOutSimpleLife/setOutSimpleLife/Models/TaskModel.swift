@@ -14,17 +14,18 @@ struct AllTasks:Codable {
 
 
 struct TaskModel:Codable {
-   var _id: String
-   var taskName: String
-   var importance: Int
-   var enjoyment: Int
-   var note: String
-   var dateCreation: String
-   var deadline: String
-   var reminder: String
-   var schedule: Bool
-   // var tag:TagModel
+   var _id: String!
+   var taskName: String!
+   var importance: Int!
+   var enjoyment: Int!
+   var note: String!
+   var dateCreation: String!
+   var deadline: String!
+   var reminder: String!
+    var endTime:String!
+   var schedule: Bool!
 }
+
 
 struct AllSchedules:Codable {
     var message:String
