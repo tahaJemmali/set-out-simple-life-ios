@@ -11,9 +11,11 @@ class HomeViewController: UIViewController {
 
     var name:String?
 
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = UserModel.shared.firstName
     }
     
 

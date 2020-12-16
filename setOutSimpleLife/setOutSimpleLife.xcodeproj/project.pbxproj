@@ -3,10 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0C9B8130764B6857CA6D15 /* Pods_setOutSimpleLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF79094D11E4C44CE4D74AF /* Pods_setOutSimpleLife.framework */; };
+		982FD2F4257D54BB0053CCBE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FD2F3257D54BB0053CCBE /* SettingsViewController.swift */; };
+		982FD2F8257D550E0053CCBE /* UserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FD2F7257D550E0053CCBE /* UserInfoHeader.swift */; };
+		982FD2FB257D551C0053CCBE /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FD2FA257D551C0053CCBE /* SettingsCell.swift */; };
+		982FD2FE257D5D320053CCBE /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FD2FD257D5D320053CCBE /* SettingsSection.swift */; };
+		982FD308257D8B0F0053CCBE /* PersonalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FD307257D8B0F0053CCBE /* PersonalDetailsViewController.swift */; };
+		982FD30B257D8C310053CCBE /* SettingsPersonalDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FD30A257D8C310053CCBE /* SettingsPersonalDetailsSection.swift */; };
+		985D4EF225838FBE00711387 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D4EF125838FBE00711387 /* CommentCell.swift */; };
+		985D4EF52583912800711387 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D4EF42583912800711387 /* CommentsViewController.swift */; };
+		985D4F4B2584000200711387 /* WebSocketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D4F4A2584000200711387 /* WebSocketController.swift */; };
+		985D4F4E2584001400711387 /* WebSocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D4F4D2584001400711387 /* WebSocketTypes.swift */; };
 		989A84382566B2D700A0F277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A84372566B2D700A0F277 /* AppDelegate.swift */; };
 		989A843A2566B2D700A0F277 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A84392566B2D700A0F277 /* SceneDelegate.swift */; };
 		989A843C2566B2D700A0F277 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A843B2566B2D700A0F277 /* ViewController.swift */; };
@@ -24,9 +35,38 @@
 		989A846A256E986F00A0F277 /* ConfirmPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A8469256E986F00A0F277 /* ConfirmPasswordViewController.swift */; };
 		989A846D256E9EB200A0F277 /* ConfirmCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A846C256E9EB200A0F277 /* ConfirmCodeViewController.swift */; };
 		989A8470256EAE3200A0F277 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A846F256EAE3200A0F277 /* HomeViewController.swift */; };
+		98ABC6482581372A007E1F83 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ABC6472581372A007E1F83 /* CreatePostViewController.swift */; };
+		98E1A050257FBBD80061B28F /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E1A04F257FBBD80061B28F /* PostHeaderCell.swift */; };
+		98E1A054257FBC090061B28F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E1A053257FBC090061B28F /* PostCell.swift */; };
+		98E1A057257FBF7D0061B28F /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E1A056257FBF7D0061B28F /* PostModel.swift */; };
+		98E1A05A257FC2170061B28F /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E1A059257FC2170061B28F /* PostsTableViewController.swift */; };
+		98E1A05D25800DBD0061B28F /* PostCellWithoutImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E1A05C25800DBD0061B28F /* PostCellWithoutImage.swift */; };
+		98E6A5F8257BEC0D00D319C6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6A5F7257BEC0D00D319C6 /* UserModel.swift */; };
+		98E6A608257C22B800D319C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6A607257C22B800D319C6 /* ProfileViewController.swift */; };
+		98E6A618257C26A800D319C6 /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6A617257C26A800D319C6 /* BottomViewController.swift */; };
+		98E6A61C257C26D200D319C6 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6A61B257C26D200D319C6 /* EmptyViewController.swift */; };
+		98E6A61F257C26F400D319C6 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6A61E257C26F400D319C6 /* HeaderViewController.swift */; };
+		98E6A626257C275300D319C6 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6A625257C275300D319C6 /* LabelCell.swift */; };
+		98E6A629257C277000D319C6 /* XLPagerTabStripExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6A628257C277000D319C6 /* XLPagerTabStripExampleViewController.swift */; };
+		98E6A634257C27E900D319C6 /* BottomPageContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6A633257C27E900D319C6 /* BottomPageContainerViewController.swift */; };
+		98E6A638257C280800D319C6 /* BottomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6A637257C280800D319C6 /* BottomPageViewController.swift */; };
+		98E6A63C257C284400D319C6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6A63B257C284400D319C6 /* Colors.swift */; };
+		98E6A63F257C286100D319C6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6A63E257C286100D319C6 /* File.swift */; };
+		98E6A642257C287C00D319C6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6A641257C287C00D319C6 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CF79094D11E4C44CE4D74AF /* Pods_setOutSimpleLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_setOutSimpleLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		982FD2F3257D54BB0053CCBE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		982FD2F7257D550E0053CCBE /* UserInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoHeader.swift; sourceTree = "<group>"; };
+		982FD2FA257D551C0053CCBE /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		982FD2FD257D5D320053CCBE /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
+		982FD307257D8B0F0053CCBE /* PersonalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsViewController.swift; sourceTree = "<group>"; };
+		982FD30A257D8C310053CCBE /* SettingsPersonalDetailsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPersonalDetailsSection.swift; sourceTree = "<group>"; };
+		985D4EF125838FBE00711387 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		985D4EF42583912800711387 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		985D4F4A2584000200711387 /* WebSocketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketController.swift; sourceTree = "<group>"; };
+		985D4F4D2584001400711387 /* WebSocketTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketTypes.swift; sourceTree = "<group>"; };
 		989A84342566B2D700A0F277 /* setOutSimpleLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = setOutSimpleLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989A84372566B2D700A0F277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		989A84392566B2D700A0F277 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +86,26 @@
 		989A8469256E986F00A0F277 /* ConfirmPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordViewController.swift; sourceTree = "<group>"; };
 		989A846C256E9EB200A0F277 /* ConfirmCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeViewController.swift; sourceTree = "<group>"; };
 		989A846F256EAE3200A0F277 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		98ABC6472581372A007E1F83 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		98E1A04F257FBBD80061B28F /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
+		98E1A053257FBC090061B28F /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		98E1A056257FBF7D0061B28F /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		98E1A059257FC2170061B28F /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
+		98E1A05C25800DBD0061B28F /* PostCellWithoutImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellWithoutImage.swift; sourceTree = "<group>"; };
+		98E6A5F7257BEC0D00D319C6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		98E6A607257C22B800D319C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		98E6A617257C26A800D319C6 /* BottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
+		98E6A61B257C26D200D319C6 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		98E6A61E257C26F400D319C6 /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
+		98E6A625257C275300D319C6 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		98E6A628257C277000D319C6 /* XLPagerTabStripExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLPagerTabStripExampleViewController.swift; sourceTree = "<group>"; };
+		98E6A633257C27E900D319C6 /* BottomPageContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPageContainerViewController.swift; sourceTree = "<group>"; };
+		98E6A637257C280800D319C6 /* BottomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPageViewController.swift; sourceTree = "<group>"; };
+		98E6A63B257C284400D319C6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		98E6A63E257C286100D319C6 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		98E6A641257C287C00D319C6 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		E89F7A128C21036E2867E8EB /* Pods-setOutSimpleLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-setOutSimpleLife.release.xcconfig"; path = "Target Support Files/Pods-setOutSimpleLife/Pods-setOutSimpleLife.release.xcconfig"; sourceTree = "<group>"; };
+		F3FC4A49E30B07D5B1711667 /* Pods-setOutSimpleLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-setOutSimpleLife.debug.xcconfig"; path = "Target Support Files/Pods-setOutSimpleLife/Pods-setOutSimpleLife.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +113,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E0C9B8130764B6857CA6D15 /* Pods_setOutSimpleLife.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		982FD2F2257D54A40053CCBE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				982FD2F3257D54BB0053CCBE /* SettingsViewController.swift */,
+				982FD2F7257D550E0053CCBE /* UserInfoHeader.swift */,
+				982FD2FA257D551C0053CCBE /* SettingsCell.swift */,
+				982FD307257D8B0F0053CCBE /* PersonalDetailsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		985D4F422583FFA500711387 /* webSocket */ = {
+			isa = PBXGroup;
+			children = (
+				985D4F4A2584000200711387 /* WebSocketController.swift */,
+				985D4F4D2584001400711387 /* WebSocketTypes.swift */,
+			);
+			path = webSocket;
+			sourceTree = "<group>";
+		};
 		989A842B2566B2D700A0F277 = {
 			isa = PBXGroup;
 			children = (
 				989A84362566B2D700A0F277 /* setOutSimpleLife */,
 				989A84352566B2D700A0F277 /* Products */,
+				AAA2700D8EE3FFDDB4CB11A9 /* Pods */,
+				E733E7EE8C910B1A6E56B49C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +161,7 @@
 		989A84362566B2D700A0F277 /* setOutSimpleLife */ = {
 			isa = PBXGroup;
 			children = (
+				985D4F422583FFA500711387 /* webSocket */,
 				989A84582567C8AA00A0F277 /* Alert */,
 				989A84522566B40600A0F277 /* Controllers */,
 				989A84512566B3FF00A0F277 /* Fonts */,
@@ -96,6 +180,10 @@
 		989A84502566B3F700A0F277 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				98E6A5F7257BEC0D00D319C6 /* UserModel.swift */,
+				982FD2FD257D5D320053CCBE /* SettingsSection.swift */,
+				982FD30A257D8C310053CCBE /* SettingsPersonalDetailsSection.swift */,
+				98E1A056257FBF7D0061B28F /* PostModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -114,12 +202,16 @@
 		989A84522566B40600A0F277 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				98E1A04E257FBBAA0061B28F /* Forum */,
+				982FD2F2257D54A40053CCBE /* Settings */,
+				98E6A611257C25A200D319C6 /* Profile */,
 				989A843B2566B2D700A0F277 /* ViewController.swift */,
 				989A84532566B43500A0F277 /* SignUpViewController.swift */,
 				989A845D256DADC600A0F277 /* ForgotPasswordViewController.swift */,
 				989A8469256E986F00A0F277 /* ConfirmPasswordViewController.swift */,
 				989A846C256E9EB200A0F277 /* ConfirmCodeViewController.swift */,
 				989A846F256EAE3200A0F277 /* HomeViewController.swift */,
+				98E6A607257C22B800D319C6 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,6 +224,78 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		98E1A04E257FBBAA0061B28F /* Forum */ = {
+			isa = PBXGroup;
+			children = (
+				98E1A04F257FBBD80061B28F /* PostHeaderCell.swift */,
+				98E1A053257FBC090061B28F /* PostCell.swift */,
+				98E1A05C25800DBD0061B28F /* PostCellWithoutImage.swift */,
+				98E1A059257FC2170061B28F /* PostsTableViewController.swift */,
+				98ABC6472581372A007E1F83 /* CreatePostViewController.swift */,
+				985D4EF125838FBE00711387 /* CommentCell.swift */,
+				985D4EF42583912800711387 /* CommentsViewController.swift */,
+			);
+			path = Forum;
+			sourceTree = "<group>";
+		};
+		98E6A611257C25A200D319C6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				98E6A616257C266A00D319C6 /* New Group */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		98E6A616257C266A00D319C6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				98E6A63A257C283300D319C6 /* New Group 3 */,
+				98E6A632257C27CC00D319C6 /* New Group 2 */,
+				98E6A617257C26A800D319C6 /* BottomViewController.swift */,
+				98E6A61B257C26D200D319C6 /* EmptyViewController.swift */,
+				98E6A61E257C26F400D319C6 /* HeaderViewController.swift */,
+				98E6A625257C275300D319C6 /* LabelCell.swift */,
+				98E6A628257C277000D319C6 /* XLPagerTabStripExampleViewController.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		98E6A632257C27CC00D319C6 /* New Group 2 */ = {
+			isa = PBXGroup;
+			children = (
+				98E6A633257C27E900D319C6 /* BottomPageContainerViewController.swift */,
+				98E6A637257C280800D319C6 /* BottomPageViewController.swift */,
+			);
+			path = "New Group 2";
+			sourceTree = "<group>";
+		};
+		98E6A63A257C283300D319C6 /* New Group 3 */ = {
+			isa = PBXGroup;
+			children = (
+				98E6A63B257C284400D319C6 /* Colors.swift */,
+				98E6A63E257C286100D319C6 /* File.swift */,
+				98E6A641257C287C00D319C6 /* GradientView.swift */,
+			);
+			path = "New Group 3";
+			sourceTree = "<group>";
+		};
+		AAA2700D8EE3FFDDB4CB11A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC4A49E30B07D5B1711667 /* Pods-setOutSimpleLife.debug.xcconfig */,
+				E89F7A128C21036E2867E8EB /* Pods-setOutSimpleLife.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E733E7EE8C910B1A6E56B49C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CF79094D11E4C44CE4D74AF /* Pods_setOutSimpleLife.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +303,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 989A844B2566B2DA00A0F277 /* Build configuration list for PBXNativeTarget "setOutSimpleLife" */;
 			buildPhases = (
+				C38CF8FBA81C5B0CA0D38DFC /* [CP] Check Pods Manifest.lock */,
 				989A84302566B2D700A0F277 /* Sources */,
 				989A84312566B2D700A0F277 /* Frameworks */,
 				989A84322566B2D700A0F277 /* Resources */,
+				9DCD19D27648CAA1E3B2828A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,21 +367,91 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9DCD19D27648CAA1E3B2828A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-setOutSimpleLife/Pods-setOutSimpleLife-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-setOutSimpleLife/Pods-setOutSimpleLife-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-setOutSimpleLife/Pods-setOutSimpleLife-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C38CF8FBA81C5B0CA0D38DFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-setOutSimpleLife-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		989A84302566B2D700A0F277 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E6A618257C26A800D319C6 /* BottomViewController.swift in Sources */,
+				98E6A63C257C284400D319C6 /* Colors.swift in Sources */,
+				98E1A057257FBF7D0061B28F /* PostModel.swift in Sources */,
+				98E6A642257C287C00D319C6 /* GradientView.swift in Sources */,
+				982FD30B257D8C310053CCBE /* SettingsPersonalDetailsSection.swift in Sources */,
+				985D4F4E2584001400711387 /* WebSocketTypes.swift in Sources */,
 				989A845A2567C8CB00A0F277 /* Alert.swift in Sources */,
+				98ABC6482581372A007E1F83 /* CreatePostViewController.swift in Sources */,
+				98E6A61F257C26F400D319C6 /* HeaderViewController.swift in Sources */,
+				985D4EF52583912800711387 /* CommentsViewController.swift in Sources */,
 				989A845E256DADC600A0F277 /* ForgotPasswordViewController.swift in Sources */,
 				989A843C2566B2D700A0F277 /* ViewController.swift in Sources */,
+				98E1A050257FBBD80061B28F /* PostHeaderCell.swift in Sources */,
+				98E1A05D25800DBD0061B28F /* PostCellWithoutImage.swift in Sources */,
 				989A84382566B2D700A0F277 /* AppDelegate.swift in Sources */,
 				989A843A2566B2D700A0F277 /* SceneDelegate.swift in Sources */,
 				989A8470256EAE3200A0F277 /* HomeViewController.swift in Sources */,
+				98E6A638257C280800D319C6 /* BottomPageViewController.swift in Sources */,
+				98E6A608257C22B800D319C6 /* ProfileViewController.swift in Sources */,
 				989A846D256E9EB200A0F277 /* ConfirmCodeViewController.swift in Sources */,
+				982FD308257D8B0F0053CCBE /* PersonalDetailsViewController.swift in Sources */,
+				98E6A634257C27E900D319C6 /* BottomPageContainerViewController.swift in Sources */,
+				985D4EF225838FBE00711387 /* CommentCell.swift in Sources */,
+				982FD2FE257D5D320053CCBE /* SettingsSection.swift in Sources */,
+				982FD2FB257D551C0053CCBE /* SettingsCell.swift in Sources */,
+				98E6A626257C275300D319C6 /* LabelCell.swift in Sources */,
+				982FD2F4257D54BB0053CCBE /* SettingsViewController.swift in Sources */,
 				989A84422566B2D700A0F277 /* setOutSimpleLife.xcdatamodeld in Sources */,
 				989A846A256E986F00A0F277 /* ConfirmPasswordViewController.swift in Sources */,
+				98E6A63F257C286100D319C6 /* File.swift in Sources */,
+				98E1A05A257FC2170061B28F /* PostsTableViewController.swift in Sources */,
+				982FD2F8257D550E0053CCBE /* UserInfoHeader.swift in Sources */,
+				985D4F4B2584000200711387 /* WebSocketController.swift in Sources */,
+				98E6A629257C277000D319C6 /* XLPagerTabStripExampleViewController.swift in Sources */,
 				989A84542566B43500A0F277 /* SignUpViewController.swift in Sources */,
+				98E6A61C257C26D200D319C6 /* EmptyViewController.swift in Sources */,
+				98E6A5F8257BEC0D00D319C6 /* UserModel.swift in Sources */,
+				98E1A054257FBC090061B28F /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +595,7 @@
 		};
 		989A844C2566B2DA00A0F277 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3FC4A49E30B07D5B1711667 /* Pods-setOutSimpleLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -377,6 +614,7 @@
 		};
 		989A844D2566B2DA00A0F277 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E89F7A128C21036E2867E8EB /* Pods-setOutSimpleLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

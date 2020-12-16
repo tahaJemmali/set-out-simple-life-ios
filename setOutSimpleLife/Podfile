@@ -1,0 +1,16 @@
+ platform :ios, '9.0'
+
+target 'setOutSimpleLife' do
+
+  use_frameworks!
+
+  # Pods for setOutSimpleLife
+pod 'SVProgressHUD'
+pod 'KKPinCodeTextField'
+pod 'TwitterProfile'
+pod 'XLPagerTabStrip'
+pod 'FaveButton'
+pod 'MessageKit', '~> 3.1.0'
+pod 'SwiftWebSocket', '~> 2.7.0'
+
+end
