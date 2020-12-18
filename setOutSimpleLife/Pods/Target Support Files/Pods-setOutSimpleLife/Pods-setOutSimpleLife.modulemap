@@ -1,0 +1,6 @@
+framework module Pods_setOutSimpleLife {
+  umbrella header "Pods-setOutSimpleLife-umbrella.h"
+
+  export *
+  module * { export * }
+}
