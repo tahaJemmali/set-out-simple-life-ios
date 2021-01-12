@@ -16,8 +16,6 @@
 		982FD30B257D8C310053CCBE /* SettingsPersonalDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FD30A257D8C310053CCBE /* SettingsPersonalDetailsSection.swift */; };
 		985D4EF225838FBE00711387 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D4EF125838FBE00711387 /* CommentCell.swift */; };
 		985D4EF52583912800711387 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D4EF42583912800711387 /* CommentsViewController.swift */; };
-		985D4F4B2584000200711387 /* WebSocketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D4F4A2584000200711387 /* WebSocketController.swift */; };
-		985D4F4E2584001400711387 /* WebSocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D4F4D2584001400711387 /* WebSocketTypes.swift */; };
 		989A84382566B2D700A0F277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A84372566B2D700A0F277 /* AppDelegate.swift */; };
 		989A843A2566B2D700A0F277 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A84392566B2D700A0F277 /* SceneDelegate.swift */; };
 		989A843C2566B2D700A0F277 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989A843B2566B2D700A0F277 /* ViewController.swift */; };
@@ -84,8 +82,6 @@
 		982FD30A257D8C310053CCBE /* SettingsPersonalDetailsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPersonalDetailsSection.swift; sourceTree = "<group>"; };
 		985D4EF125838FBE00711387 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		985D4EF42583912800711387 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
-		985D4F4A2584000200711387 /* WebSocketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketController.swift; sourceTree = "<group>"; };
-		985D4F4D2584001400711387 /* WebSocketTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketTypes.swift; sourceTree = "<group>"; };
 		989A84342566B2D700A0F277 /* setOutSimpleLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = setOutSimpleLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989A84372566B2D700A0F277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		989A84392566B2D700A0F277 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,15 +166,6 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		985D4F422583FFA500711387 /* webSocket */ = {
-			isa = PBXGroup;
-			children = (
-				985D4F4A2584000200711387 /* WebSocketController.swift */,
-				985D4F4D2584001400711387 /* WebSocketTypes.swift */,
-			);
-			path = webSocket;
-			sourceTree = "<group>";
-		};
 		989A842B2566B2D700A0F277 = {
 			isa = PBXGroup;
 			children = (
@@ -201,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				98FCCD6C258A8DBB0013A554 /* SwiftUI */,
-				985D4F422583FFA500711387 /* webSocket */,
 				989A84582567C8AA00A0F277 /* Alert */,
 				989A84522566B40600A0F277 /* Controllers */,
 				989A84512566B3FF00A0F277 /* Fonts */,
@@ -491,7 +477,6 @@
 				98FCCD81258A8E2E0013A554 /* Dictionary.swift in Sources */,
 				98E6A642257C287C00D319C6 /* GradientView.swift in Sources */,
 				982FD30B257D8C310053CCBE /* SettingsPersonalDetailsSection.swift in Sources */,
-				985D4F4E2584001400711387 /* WebSocketTypes.swift in Sources */,
 				989A845A2567C8CB00A0F277 /* Alert.swift in Sources */,
 				98ABC6482581372A007E1F83 /* CreatePostViewController.swift in Sources */,
 				98E6A61F257C26F400D319C6 /* HeaderViewController.swift in Sources */,
@@ -529,7 +514,6 @@
 				98E6A63F257C286100D319C6 /* File.swift in Sources */,
 				98E1A05A257FC2170061B28F /* PostsTableViewController.swift in Sources */,
 				982FD2F8257D550E0053CCBE /* UserInfoHeader.swift in Sources */,
-				985D4F4B2584000200711387 /* WebSocketController.swift in Sources */,
 				98E6A629257C277000D319C6 /* XLPagerTabStripExampleViewController.swift in Sources */,
 				989A84542566B43500A0F277 /* SignUpViewController.swift in Sources */,
 				98E6A61C257C26D200D319C6 /* EmptyViewController.swift in Sources */,

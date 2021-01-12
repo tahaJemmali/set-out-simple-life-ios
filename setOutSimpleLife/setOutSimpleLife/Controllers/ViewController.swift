@@ -8,6 +8,8 @@
 import UIKit
 import SVProgressHUD
 
+var globalUrl = "https://setoutfahd.herokuapp.com/"
+
 class ViewController: UIViewController,myProtocol {
     
     var vc : SignUpViewController?
@@ -78,7 +80,7 @@ class ViewController: UIViewController,myProtocol {
         var json: String?
         let parameters: [String: String] = ["email": email, "password": password]
             //create the url with URL
-            let url = URL(string: "http://localhost:3000/login")!
+            let url = URL(string: globalUrl + "login")!
             //let url = URL(string: "https://set-out.herokuapp.com/login/fahd.larayedh@esprit.tn/123")!
             //create the session object
             let session = URLSession.shared
@@ -151,7 +153,7 @@ class ViewController: UIViewController,myProtocol {
     func loadUser(email:String) {
         var json: String?
 
-        let url = URL(string: "http://localhost:3000/getUser/"+email)!
+        let url = URL(string: globalUrl + "getUser/"+email)!
             //let url = URL(string: "https://set-out.herokuapp.com/login/fahd.larayedh@esprit.tn/123")!
             let session = URLSession.shared
             var request = URLRequest(url: url)

@@ -51,7 +51,7 @@ class AddProjectViewController: UIViewController,UITableViewDataSource,UITableVi
         
   
        func getAllTasks()  {
-            let url = "https://set-out.herokuapp.com/all_tasks"
+            let url = "https://set-out.herokuapp.com/all_tasks" + "/" + UserModel.shared.id!
                  let urlRequest=URL(string:url)!
                  URLSession.shared.dataTask(with:urlRequest){
                      (data,response,error) in
@@ -159,7 +159,7 @@ class AddProjectViewController: UIViewController,UITableViewDataSource,UITableVi
     
     
     func getAllTags()  {
-        let url = "https://set-out.herokuapp.com/all_tags"
+        let url = "https://set-out.herokuapp.com/all_tags" + "/" + UserModel.shared.id!
              let urlRequest=URL(string:url)!
              URLSession.shared.dataTask(with:urlRequest){
                  (data,response,error) in

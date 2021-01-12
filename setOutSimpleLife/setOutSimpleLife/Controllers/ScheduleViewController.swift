@@ -9,12 +9,13 @@ import UIKit
 import CalendarKit
 
 class ScheduleViewController: DayViewController {
-    var data:[[String]] = [[]]
+    var data:[[String]] = []
      
     var schedules:[ScheduleModel] = []
     
     func getAllSchedule()  {
-        let url = "https://set-out.herokuapp.com/all_schedules"
+     
+        let url = "https://set-out.herokuapp.com/all_schedules" + "/" + UserModel.shared.id!
         let urlRequest=URL(string:url)!
           URLSession.shared.dataTask(with:urlRequest){
               (data,response,error) in
@@ -28,18 +29,25 @@ class ScheduleViewController: DayViewController {
                       let array = result.tasks as [ScheduleModel]?
                     DispatchQueue.main.async {
                         self.schedules = array!
+                        //print(self.schedules.count)
+
                         for row in self.schedules{
-                            self.data.append([row.taskName,row.note])
-                            self.reloadData()
+                            self.data.append([row.taskName,row.note,row.dateCreation])
+                            //print("tftft")
+                            
+                            //self.reloadData()
                         }
-                        print(self.data)
-                                        }
+                        print("a f f")
+                        //print(self.data)
+                        //self.reloadData()
+                    }
                   }catch{
                       print("failed to convert \(error.localizedDescription) ")
                   }
           }.resume()
     }
     
+
      var generatedEvents = [EventDescriptor]()
      var alreadyGeneratedSet = Set<Date>()
      
@@ -57,7 +65,7 @@ class ScheduleViewController: DayViewController {
      }()
 
      override func loadView() {
-        getAllSchedule()
+        
        calendar.timeZone = TimeZone(identifier: "Europe/Paris")!
        dayView = DayView(calendar: calendar)
        view = dayView
@@ -66,6 +74,8 @@ class ScheduleViewController: DayViewController {
      override func viewDidLoad() {
         
        super.viewDidLoad()
+        data.removeAll()
+        getAllSchedule()
        navigationController?.navigationBar.isTranslucent = false
        dayView.autoScrollToFirstEvent = true
        reloadData()
@@ -74,7 +84,8 @@ class ScheduleViewController: DayViewController {
      // MARK: EventDataSource
  
      override func eventsForDate(_ date: Date) -> [EventDescriptor] {
-       if !alreadyGeneratedSet.contains(date) {
+        if !alreadyGeneratedSet.contains(date) && !data.isEmpty{
+            
          alreadyGeneratedSet.insert(date)
          generatedEvents.append(contentsOf: generateEventsForDate(date))
        }
@@ -84,8 +95,10 @@ class ScheduleViewController: DayViewController {
      private func generateEventsForDate(_ date: Date) -> [EventDescriptor] {
        var workingDate = Calendar.current.date(byAdding: .hour, value: Int.random(in: 1...15), to: date)!
        var events = [Event]()
-       
-       for i in 0...4 {
+       print("ffgfgfggffg")
+        print(data)
+        if !data.isEmpty {
+        for i in 0...data.count {
          let event = Event()
 
          let duration = Int.random(in: 60 ... 160)
@@ -116,7 +129,7 @@ class ScheduleViewController: DayViewController {
          let nextOffset = Int.random(in: 40 ... 250)
          workingDate = Calendar.current.date(byAdding: .minute, value: nextOffset, to: workingDate)!
          event.userInfo = String(i)
-       }
+        }}
 
       // print("Events for \(date)")
        return events

@@ -30,7 +30,8 @@ struct Sender: SenderType{
 
 class CommentsViewController: MessagesViewController {
 
-    let ws = WebSocket("ws://localhost:3001")
+    //let ws = WebSocket("ws://localhost:3001")
+    let ws = WebSocket("wss://setoutfahd.herokuapp.com")
 
     func echoTest(){
         //var messageNum = 0
@@ -143,7 +144,7 @@ class CommentsViewController: MessagesViewController {
     func fetchComments(postId:String){
         var json: String?
 
-        let url = URL(string: "http://localhost:3000/getComments/"+postId)!
+        let url = URL(string: globalUrl + "getComments/"+postId)!
             //let url = URL(string: "https://set-out.herokuapp.com/login/fahd.larayedh@esprit.tn/123")!
             let session = URLSession.shared
             var request = URLRequest(url: url)

@@ -143,7 +143,7 @@ class tagData: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
            getAllTags()
       }
     func getAllTags()  {
-        let url = "https://set-out.herokuapp.com/all_tags"
+        let url = "https://set-out.herokuapp.com/all_tags" + "/" + UserModel.shared.id!
              let urlRequest=URL(string:url)!
              URLSession.shared.dataTask(with:urlRequest){
                  (data,response,error) in

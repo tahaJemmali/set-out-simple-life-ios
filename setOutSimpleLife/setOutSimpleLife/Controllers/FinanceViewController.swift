@@ -161,7 +161,7 @@ class FinanceViewController: UIViewController, UITableViewDataSource,UITableView
     }
 
     func getAllBalances()  {
-        let url = "https://set-out.herokuapp.com/all_balances"
+        let url = "https://set-out.herokuapp.com/all_balances" + "/" + UserModel.shared.id!
                let urlRequest=URL(string:url)!
                URLSession.shared.dataTask(with:urlRequest){
                    (data,response,error) in

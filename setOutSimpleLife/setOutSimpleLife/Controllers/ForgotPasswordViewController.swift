@@ -58,15 +58,14 @@ class ForgotPasswordViewController: UIViewController {
 
     func sendCode(email:String) {
         var json: String?
-        var infos:(email: String, code: String)?
+        //var infos:(email: String, code: String)?
         var stringCode : String?
         var stringEmail : String?
 
         //print("email : ",email)
         let parameters: [String: String] = ["email": email]
             //create the url with URL
-        //let s : String = "http://localhost:3000/passwordRecovery/"+email
-            let url = URL(string: "http://localhost:3000/passwordRecovery")!
+            let url = URL(string: globalUrl + "passwordRecovery")!
             //let url = URL(string: "https://set-out.herokuapp.com/passwordRecovery")!
             //create the session object
             let session = URLSession.shared

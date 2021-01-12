@@ -162,8 +162,7 @@ class PersonalDetailsViewController: UIViewController , UITextFieldDelegate,myPr
         }else{
         parameters = ["oldEmail": oldEmail,"newEmail":newEmail,"password":pwd,"firstName": self.firstName,"lastName":self.lastName,"address":self.address,"phone":self.phone]
         }
-            let url = URL(string: "http://localhost:3000/updateUserEmail")!
-            //let url = URL(string: "https://set-out.herokuapp.com/passwordRecovery")!
+            let url = URL(string: globalUrl + "updateUserEmail")!
         
             //create the session object
             let session = URLSession.shared
@@ -219,49 +218,6 @@ class PersonalDetailsViewController: UIViewController , UITextFieldDelegate,myPr
             task.resume()
     }
     
-    /*func updateUser(){
-        var json: String?
-        let parameters: [String: String] = [,"id":UserModel.shared.id!]
-
-            let url = URL(string: "http://localhost:3000/updateUser")!
-            //let url = URL(string: "https://set-out.herokuapp.com/passwordRecovery")!
-        
-            //create the session object
-            let session = URLSession.shared
-            //now create the URLRequest object using the url object
-            var request = URLRequest(url: url)
-            request.httpMethod = "PUT" //set http method as PUT
-            do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) // pass dictionary to nsdata object and set it as request body
-            } catch let error {
-                print(error.localizedDescription)
-            }
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.addValue("application/json", forHTTPHeaderField: "Accept")
-            //create dataTask using the session object to send data to the server
-            let task = session.dataTask(with: request, completionHandler: { data, response, error in
-                guard error == nil else {
-                    return
-                }
-                do {
-                    json = String(data: data!,encoding: .utf8)
-                }
-                DispatchQueue.main.async {
-                     if (json!.contains("Done")){
-                        
-                        SVProgressHUD.dismiss()
-                        let alert = UIAlertController(title: "Done!", message: "Profile updated", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                            //self.dismiss(animated: true, completion: nil)
-                            self.backAction()
-                        }))
-                        self.present(alert, animated: true, completion: nil)
-
-                    }
-                }
-            })
-            task.resume()
-    }*/
     
     func backAction() -> Void {
         self.navigationController?.popViewController(animated: true)

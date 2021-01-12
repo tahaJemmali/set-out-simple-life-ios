@@ -19,7 +19,7 @@ class TaskViewController: UIViewController,UITableViewDataSource,UITableViewDele
    
 //State
     override func viewDidLoad() {
-        let url = "https://set-out.herokuapp.com/all_projects"
+        let url = "https://set-out.herokuapp.com/all_projects" + "/" + UserModel.shared.id!
         getAllProjects(from: url)
         super.viewDidLoad()
     

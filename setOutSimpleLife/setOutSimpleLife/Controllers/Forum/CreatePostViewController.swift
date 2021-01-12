@@ -69,7 +69,7 @@ class CreatePostViewController: UIViewController {
         var userId : String = UserModel.shared.email!
         let parameters: [String: String] = ["user_id": userId, "title": titleTextField.text!,"description":descriptionTextView.text!,"image":imageBase64String!]
             //create the url with URL
-            let url = URL(string: "http://localhost:3000/addPost")!
+            let url = URL(string: globalUrl + "addPost")!
             //let url = URL(string: "https://set-out.herokuapp.com/register")!
             //create the session object
             let session = URLSession.shared
@@ -125,9 +125,13 @@ extension CreatePostViewController: UIImagePickerControllerDelegate & UINavigati
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
         guard let image = info[.originalImage] as? UIImage else { return }
-        CreatePostViewController.image = image
+        let myCompressedImage = image.resizeWithWidth(width: 700)!
+        //print("fhhf")
+        //print(image.size)
+        //print("fhhf")
+        CreatePostViewController.image = myCompressedImage
         
-        currentButton?.setBackgroundImage(image, for: .normal)
+        currentButton?.setBackgroundImage(myCompressedImage, for: .normal)
     }
 }
 
@@ -137,5 +141,30 @@ extension UIImage {
             return data.base64EncodedString(options: .endLineWithCarriageReturn)
         }
         return nil
+    }
+}
+
+extension UIImage {
+    func resizeWithPercent(percentage: CGFloat) -> UIImage? {
+        let imageView = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: size.width * percentage, height: size.height * percentage)))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = self
+        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, scale)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        imageView.layer.render(in: context)
+        guard let result = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        UIGraphicsEndImageContext()
+        return result
+    }
+    func resizeWithWidth(width: CGFloat) -> UIImage? {
+        let imageView = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = self
+        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, scale)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        imageView.layer.render(in: context)
+        guard let result = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        UIGraphicsEndImageContext()
+        return result
     }
 }

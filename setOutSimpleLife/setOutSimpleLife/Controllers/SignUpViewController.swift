@@ -77,7 +77,7 @@ class SignUpViewController: UIViewController {
         var json: String?
         let parameters: [String: String] = ["email": email, "password": password,"firstName":firstName,"lastName":lastName]
             //create the url with URL
-            let url = URL(string: "http://localhost:3000/register")!
+            let url = URL(string: globalUrl + "register")!
             //let url = URL(string: "https://set-out.herokuapp.com/register")!
             //create the session object
             let session = URLSession.shared

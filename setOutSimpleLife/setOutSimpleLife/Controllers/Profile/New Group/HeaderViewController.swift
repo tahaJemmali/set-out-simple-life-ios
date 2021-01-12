@@ -209,7 +209,7 @@ class HeaderViewController: UIViewController {
             let userEmail : String = UserModel.shared.email!
             let parameters: [String: String] = ["user_email": userEmail, "photo":imageBase64String!]
                 //create the url with URL
-                let url = URL(string: "http://localhost:3000/updateUserPhoto")!
+                let url = URL(string: globalUrl + "updateUserPhoto")!
                 //let url = URL(string: "https://set-out.herokuapp.com/register")!
                 //create the session object
                 let session = URLSession.shared
@@ -305,7 +305,9 @@ extension HeaderViewController: UIImagePickerControllerDelegate & UINavigationCo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
         guard let image = info[.originalImage] as? UIImage else { return }
-        self.covermageView.image = image
+        let myCompressedImage = image.resizeWithWidth(width: 700)!
+        self.covermageView.image = myCompressedImage
+        
         self.updateUserPhoto()
         //currentButton?.setBackgroundImage(image, for: .normal)
         

@@ -73,7 +73,7 @@ class PostsTableViewController: UITableViewController {
     
         var json: String?
 
-        let url = URL(string: "http://localhost:3000/getPosts")!
+        let url = URL(string: globalUrl + "getPosts")!
             //let url = URL(string: "https://set-out.herokuapp.com/getPosts")!
             let session = URLSession.shared
             var request = URLRequest(url: url)
@@ -281,7 +281,7 @@ extension PostsTableViewController {
         var json: String?
         let parameters: [String: String] = ["post_id": postId,"user_liked_email":email]
             
-            let url = URL(string: "http://localhost:3000/likePost")!
+            let url = URL(string: globalUrl + "likePost")!
             //let url = URL(string: "https://set-out.herokuapp.com/passwordRecovery")!
         
             //create the session object
@@ -316,7 +316,7 @@ extension PostsTableViewController {
         var json: String?
         let parameters: [String: String] = ["post_id": postId,"user_unLiked_email":email]
             
-            let url = URL(string: "http://localhost:3000/unLikePost")!
+            let url = URL(string: globalUrl + "unLikePost")!
             //let url = URL(string: "https://set-out.herokuapp.com/passwordRecovery")!
         
             //create the session object
